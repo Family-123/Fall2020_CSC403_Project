@@ -5,9 +5,10 @@ namespace Fall2020_CSC403_Project.code {
   /// This is the class for an enemy
   /// </summary>
   public class Enemy : BattleCharacter {
-    /// <summary>
-    /// THis is the image for an enemy
-    /// </summary>
+        /// <summary>
+        /// THis is the image for an enemy
+        /// </summary>
+        public int Counter = 0;
     public Image Img { get; set; }
 
     /// <summary>

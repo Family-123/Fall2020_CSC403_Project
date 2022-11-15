@@ -26,6 +26,7 @@ namespace Fall2020_CSC403_Project.code {
 
     public void MoveBack() {
       Position = LastPosition;
+      Collider.MovePosition((int)Position.x, (int)Position.y);
     }
 
     public void GoLeft() {

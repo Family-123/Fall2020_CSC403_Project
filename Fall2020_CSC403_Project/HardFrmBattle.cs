@@ -130,8 +130,15 @@ namespace Fall2020_CSC403_Project {
       }
       if (enemy.Health <= 0 && hardplayer.Health > enemy.Health)
             {
-                    SetupForVictoryScreen();
+                enemy.Collider.DeleteCollider();    
+                SetupForVictoryScreen();
             }
+        if (enemy.Health <= 0)
+        {
+            instance = null;
+            Close();
+            enemy.Collider.DeleteCollider();
+        }
     }
 
     private void btnHeal_Click(object sender, EventArgs e) {

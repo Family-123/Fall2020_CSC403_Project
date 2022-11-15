@@ -50,6 +50,7 @@ namespace Fall2020_CSC403_Project
             this.picWall1 = new System.Windows.Forms.PictureBox();
             this.picWall2 = new System.Windows.Forms.PictureBox();
             this.picWall11 = new System.Windows.Forms.PictureBox();
+            this.UpdateEnemyPic = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
@@ -280,6 +281,11 @@ namespace Fall2020_CSC403_Project
             this.picWall11.TabIndex = 17;
             this.picWall11.TabStop = false;
             // 
+            // UpdateEnemyPic
+            // 
+            this.UpdateEnemyPic.Enabled = true;
+            this.UpdateEnemyPic.Tick += new System.EventHandler(this.tmrUpdateEnemyPic_Tick);
+            // 
             // HardFrmLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,6 +362,8 @@ namespace Fall2020_CSC403_Project
         private System.Windows.Forms.PictureBox picWall1;
         private System.Windows.Forms.PictureBox picWall2;
         private System.Windows.Forms.PictureBox picWall11;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Timer UpdateEnemyPic;
     }
 }
 

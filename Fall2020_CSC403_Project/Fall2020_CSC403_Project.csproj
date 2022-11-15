@@ -114,6 +114,12 @@
     <Compile Include="HardFrmLevel.Designer.cs">
       <DependentUpon>HardFrmLevel.cs</DependentUpon>
     </Compile>
+    <Compile Include="PauseMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PauseMenu.Designer.cs">
+      <DependentUpon>PauseMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="HarderFrmBattle.resx">

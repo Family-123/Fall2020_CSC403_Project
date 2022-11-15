@@ -45,7 +45,8 @@
       this.picWall1 = new System.Windows.Forms.PictureBox();
       this.picWall2 = new System.Windows.Forms.PictureBox();
       this.picWall11 = new System.Windows.Forms.PictureBox();
-      ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
+            this.UpdateEnemyPic = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
@@ -274,10 +275,15 @@
       this.picWall11.Size = new System.Drawing.Size(164, 232);
       this.picWall11.TabIndex = 17;
       this.picWall11.TabStop = false;
-      // 
-      // FrmLevel
-      // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            // 
+            // UpdateEnemyPic
+            // 
+            this.UpdateEnemyPic.Enabled = true;
+            this.UpdateEnemyPic.Tick += new System.EventHandler(this.tmrUpdateEnemyPic_Tick);
+            // 
+            // FrmLevel
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -351,6 +357,8 @@
     private System.Windows.Forms.PictureBox picWall1;
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
-  }
+    private System.ComponentModel.BackgroundWorker backgroundWorker1;
+    private System.Windows.Forms.Timer UpdateEnemyPic;
+    }
 }
 

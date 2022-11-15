@@ -13,8 +13,6 @@ namespace Fall2020_CSC403_Project
 {
     
     public partial class FrmStartMenu : Form {
-        public static int difficult_number = 1;
-        
 
         public FrmStartMenu() {
             InitializeComponent();
